@@ -1,8 +1,8 @@
-import React from "react";
-import Btn from "../button/btn";
+import React, { useState } from "react";
+import Btn from "../button/page";
 import Image from "next/image";
 
-export default function Modale({ logo, title, text, alt }) {
+export default function Modale({ status, logo, title, text, alt }) {
   return (
     <section className="modale">
       <hr className="line" />
@@ -12,7 +12,7 @@ export default function Modale({ logo, title, text, alt }) {
       </section>
       <h1>{title}</h1>
       <p>{text}</p>
-      <Btn text="ok" />
+      <Btn text={status} />
     </section>
   );
 }
