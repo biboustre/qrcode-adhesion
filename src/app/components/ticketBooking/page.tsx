@@ -38,7 +38,7 @@ export default function TicketBooking() {
           logo={BilletValide}
           title="Billet valide"
           text="ok"
-          alt="ok"
+          alt="#"
         />
       )}
       {status === "non-payé" && (
@@ -47,7 +47,7 @@ export default function TicketBooking() {
           logo={BilletNonPayer}
           title="Billet non payé"
           text="ok"
-          alt="ok"
+          alt="#"
         />
       )}
       {status === "invalide" && (
@@ -56,7 +56,7 @@ export default function TicketBooking() {
           logo={BilletInvalide}
           title="Billet invalide"
           text="ok"
-          alt="ok"
+          alt="#"
         />
       )}
     </section>
