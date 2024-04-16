@@ -1,5 +1,20 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+  }
+
+
+
+
+
 .containerHome{
-    padding-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* padding-top: 20px; */
 }
 
 .headerHome {
@@ -7,11 +22,23 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+  padding: 20px 0 40px;
 }
 
 .eventHome {
   color: #2b254b;
   font-family: "Source Sans Pro";
   font-size: 16px;
-  padding: 0 15px;
+  padding: 0 20px;
+}
+
+.mainHome{
+    background-color: rgb(87, 49, 29);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mainHome :nth-child(1) {
+    margin-top: 200px;
 }

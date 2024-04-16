@@ -1,0 +1,26 @@
+.btnModale {
+  display: flex;
+  width: 341px;
+  height: 50px;
+  /* padding: 10px 35px; */
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 22;
+  bottom: 29px;
+  border-radius: 26.5px;
+  border: 1px solid #3d029c;
+  background: #fff;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.btnModale > h1 {
+  font-family: Ubuntu;
+  font-size: 18px;
+  background: linear-gradient(136deg, #3D029C 15.14%, #9221AA 66.57%, #B100CE 83.71%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
