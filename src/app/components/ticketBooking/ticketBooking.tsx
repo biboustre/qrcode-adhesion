@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Modale from '../modale/modale';
+import Modale from "../modale/modale";
 
 export default function TicketBooking() {
   const [status, setStatus] = useState(null);
@@ -22,18 +22,16 @@ export default function TicketBooking() {
 
   return (
     <section>
-      {status === "validé" && (
-        <Modale logo="" title="" text="" alt=""/>
-      )}
+      {status === "validé" && <Modale logo="" title="" text="" alt="" />}
       {status === "non-payé" && (
-        <Modale logo="" title="" text="" alt=""/>
+        <Modale logo="" title="" text="" alt="" />
 
         // <section className="logo">
         //   <Image src="/logo-non-payer.png" alt="Billet non payer" />
         // </section>
       )}
       {status === "invalide" && (
-        <Modale logo="" title="" text="" alt=""/>
+        <Modale logo="" title="" text="" alt="" />
 
         // <section className="logo">
         //   <Image src="/logo-invalide.png" alt="Billet invalide" />

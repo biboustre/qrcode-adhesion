@@ -1,7 +1,6 @@
 import React from "react";
 import Btn from "../button/btn";
-import Image from 'next/image';
-
+import Image from "next/image";
 
 export default function Modale({ logo, title, text, alt }) {
   return (
