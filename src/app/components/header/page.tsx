@@ -1,16 +1,14 @@
-// import { headers } from "next/headers";
 import Image from "next/image";
 import React from "react";
-import Event from "../event/page";
-// import LOGO from "../../assets/images/Group 112.png";
+import '../header/page.css';
 
-export default function Header({ logo, alt }) {
+export default function Header({ logo, alt, children, className }) {
   return (
-    <header>
+    <header className={`header ${className}`}>
       <section className="logo">
         <Image src={logo} alt={alt} />
       </section>
-      <Event title="" name="" date=""/>
+      {children}
     </header>
   );
 }
