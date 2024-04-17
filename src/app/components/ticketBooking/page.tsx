@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Modale from "../modale/page";
+import Modale from "../modal/page";
 import BilletNonPayer from "../../../assets/images/Group 1287.png";
 import BilletInvalide from "../../../assets/images/Group 278 (1).png";
 import BilletValide from "../../../assets/images/Group 278.png";
@@ -34,33 +34,31 @@ export default function TicketBooking() {
     <section>
       {status === "valide" && (
         <Modale
-          status={status}
+          statu={btnText}
           logo={BilletValide}
           title="Billet valide"
-          text="ok"
+          text="API"
           alt="#"
         />
       )}
       {status === "non-payé" && (
         <Modale
-          status={status}
+          statu={btnText}
           logo={BilletNonPayer}
           title="Billet non payé"
-          text="ok"
+          text="API"
           alt="#"
         />
       )}
       {status === "invalide" && (
         <Modale
-          status={status}
+          statu={btnText}
           logo={BilletInvalide}
           title="Billet invalide"
-          text="ok"
+          text="API"
           alt="#"
         />
       )}
     </section>
   );
 }
-
-

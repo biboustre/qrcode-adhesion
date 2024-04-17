@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "../button/page.css";
 
-export default function btn({ text }) {
-  return <button className="btnModale">{text}</button>;
+export default function btn({children}) {
+
+  return <button className="btnModale">{children}</button>;
 }
