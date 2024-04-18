@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Header from "./components/header/page";
 import LOGO from "../assets/images/Group 112.png";
+import LOGO2 from "../assets/images/Group 278.png";
 import Event from "../app/components/event/page";
 import "../../src/app/page.css";
 import Image from "next/image";
@@ -9,13 +10,13 @@ import SCAN from "../assets/images/Subtract.png";
 import Btn from "./components/button/page";
 import TicketBooking from "./components/ticketBooking/page";
 import Head from "next/head";
+import Modale from "./components/modal/page";
 
 export default function Home() {
   const [token, setToken] = useState(null);
   const [eventInfo, setEventInfo] = useState(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [btnText, setBtnText] = useState("Mon appareil photo ne marche pas");
-
 
   const fetchEventData = async (token) => {
     try {
@@ -71,6 +72,13 @@ export default function Home() {
         <Image src={SCAN} alt="logo de scan" />
       </main>
       <Btn>{btnText}</Btn>
+      <Modale
+        statu={btnText}
+        logo={LOGO2}
+        title="Billet invalide"
+        text="API"
+        alt="#"
+      />
       <TicketBooking />
     </div>
   );
