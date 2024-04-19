@@ -73,7 +73,7 @@ export default function Home() {
       </main>
       <Btn>{btnText}</Btn>
       <Modale
-        statu={btnText}
+        status={btnText}
         logo={LOGO2}
         title="Billet invalide"
         text="API"

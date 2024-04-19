@@ -8,21 +8,21 @@ import BilletValide from "../../../assets/images/Group 278.png";
 export default function TicketBooking() {
   const [status, setStatus] = useState("");
   const [btnText, setBtnText] = useState("Mon appareil photo ne marche pas");
-  const STATUT_VALIDE = "valide";
-  const STATUT_NON_PAYE = "non-payé";
-  const STATUT_INVALIDE = "invalide";
+  const STATUS_VALIDE = "valide";
+  const STATUS_NON_PAYE = "non-payé";
+  const STATUS_INVALIDE = "invalide";
 
   const handleQRCode = async () => {
     try {
       const response = await fetch("");
       if (response.ok) {
-        setStatus(STATUT_VALIDE);
+        setStatus(STATUS_VALIDE);
         setBtnText("OK");
       } else if (response.status === 402) {
-        setStatus(STATUT_NON_PAYE);
+        setStatus(STATUS_NON_PAYE);
         setBtnText("OK");
       } else {
-        setStatus(STATUT_INVALIDE);
+        setStatus(STATUS_INVALIDE);
         setBtnText("OK");
       }
     } catch (error) {
@@ -34,7 +34,7 @@ export default function TicketBooking() {
     <section>
       {status === "valide" && (
         <Modale
-          statu={btnText}
+          status={btnText}
           logo={BilletValide}
           title="Billet valide"
           text="API"
@@ -43,7 +43,7 @@ export default function TicketBooking() {
       )}
       {status === "non-payé" && (
         <Modale
-          statu={btnText}
+          status={btnText}
           logo={BilletNonPayer}
           title="Billet non payé"
           text="API"
@@ -52,7 +52,7 @@ export default function TicketBooking() {
       )}
       {status === "invalide" && (
         <Modale
-          statu={btnText}
+          status={btnText}
           logo={BilletInvalide}
           title="Billet invalide"
           text="API"
